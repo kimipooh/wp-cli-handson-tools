@@ -11,6 +11,7 @@ MAMPをコマンドラインから一発インストールするためのスク�
 このファイルを開いて、下記の設定を変更してください。
 以下のサンプル例は、MAMPで http://localhost:8888/demo としてアクセスできる WordPress のインストール設定です
 
+```
 export sitename="demo"
 export dbuser="root"
 export dbpass="root"
@@ -23,7 +24,10 @@ export admin_user="admin"
 export admin_password="admin"
 export admin_email="admin@example.com"
 export wp_install_dir="/Applications/MAMP/htdocs/"
+```
 
 利用方法は、
+```
 sh  wp-installer.sh
+```
 で利用できます。wp_install_dir で指定したフォルダのなかに sitename で指定したフォルダがあれば、上書き防止のため処理を終了してインストールしません。予めインストール先に指定したフォルダがないことを確認してください。
