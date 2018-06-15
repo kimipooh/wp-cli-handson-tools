@@ -37,3 +37,14 @@ sh  ~/Downloads/wp-installer.sh
 ハンズオンではしませんが、MAMPでより高度なインストール、削除をしたい場合には、[mamp-wp-installer](https://github.com/kimipooh/mamp-wp-installer) を GitHubにアップしているので、参考にしてみてください。httpsのサイトや、Virtualホストを試してみたければ、
 - [コマンドツールで MAMP を SSL 対応しよう！ - macOS High Sierra 編 -](https://kitaney-wordpress.blogspot.jp/2017/10/mamp-ssl-macos-high-sierra.html)
 を参考にしてみてはと思います。ただ、Local by Flywheel, VCCW, Wocker などのツールをつかうほうが簡単です。Linuxサーバーで行うコマンドの確認であったり、環境をすべてセットアップした上で、MAMPフォルダをまるごと圧縮して他の端末にもっていくのが簡単だというのが MAMPの特徴かと思います。
+
+## wp-update-all.sh
+
+WP-CLI 自体の更新をした上で、あらかじめ設定しておいた BackWPUPプラグインでバックアップしてから、更新する一連の作業が入ったサンプルスクリプト。
+あらかじめエイリアスに設定した全サイトに対して一括で処理する
+
+利用方法は、仮に ダウンロードフォルダ（~/Downloads/）に wp-installer.sh があるとして
+```
+sh  ~/Downloads/wp-update-all.sh
+```
+である。
