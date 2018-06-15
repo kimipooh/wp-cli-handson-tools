@@ -1,12 +1,13 @@
 # wp-cli-handson-tools
-WP-CLI ハンズオン用のツール類をまとめたものです。
-Linux, macOS を想定しています。
+WordBench 大阪 （2018-06-23）で行う、WP-CLI ハンズオン用のツール類をまとめたものです。Linux, macOS を想定しています。
 
 ## mamp-php-path.txt
 MAMP上の WordPress を WP-CLI で制御するために必要な、MAMPのPHPへのパスを探して設定してくれる .bash_profile 用の設定が入っています。MAMPをつかう場合には、この中身を $HOME/.bash_profile の末尾に追加しておいてください。
 
 ## wp-installer.sh
 MAMPをコマンドラインから一発インストールするためのスクリプトです。
+
+WP Multibyte Patch を有効にし、Logbookプラグインをインストールして有効化します。ユーザーとして、 admin（管理者）、test（編集者）を作成します。
 
 このファイルを開いて、下記の設定を変更してください。
 以下のサンプル例は、MAMPで http://localhost:8888/demo としてアクセスできる WordPress のインストール設定です
@@ -26,8 +27,13 @@ export admin_email="admin@example.com"
 export wp_install_dir="/Applications/MAMP/htdocs/"
 ```
 
-利用方法は、
+利用方法は、仮に ダウンロードフォルダ（~/Downloads/）に wp-installer.sh があるとして
 ```
-sh  wp-installer.sh
+sh  ~/Downloads/wp-installer.sh
 ```
 で利用できます。wp_install_dir で指定したフォルダのなかに sitename で指定したフォルダがあれば、上書き防止のため処理を終了してインストールしません。予めインストール先に指定したフォルダがないことを確認してください。
+（上記サンプルだと、/Applications/MAMP/htdocs/demo フォルダがあればインストールをしないということです）
+
+ハンズオンではしませんが、MAMPでより高度なインストール、削除をしたい場合には、[mamp-wp-installer](https://github.com/kimipooh/mamp-wp-installer) を GitHubにアップしているので、参考にしてみてください。httpsのサイトや、Virtualホストを試してみたければ、
+- [コマンドツールで MAMP を SSL 対応しよう！ - macOS High Sierra 編 -](https://kitaney-wordpress.blogspot.jp/2017/10/mamp-ssl-macos-high-sierra.html)
+を参考にしてみてはと思います。ただ、Local by Flywheel, VCCW, Wocker などのツールをつかうほうが簡単です。Linuxサーバーで行うコマンドの確認であったり、環境をすべてセットアップした上で、MAMPフォルダをまるごと圧縮して他の端末にもっていくのが簡単だというのが MAMPの特徴かと思います。
