@@ -1,9 +1,6 @@
 # wp-cli-handson-tools
 WordBench 大阪 （2018-06-23）で行う、WP-CLI ハンズオン用のツール類をまとめたものです。Linux, macOS を想定しています。
 
-## mamp-php-path.txt
-MAMP上の WordPress を WP-CLI で制御するために必要な、MAMPのPHPへのパスを探して設定してくれる .bash_profile 用の設定が入っています。MAMPをつかう場合には、この中身を $HOME/.bash_profile の末尾に追加しておいてください。
-
 ## wp-installer.sh
 MAMPをコマンドラインから一発インストールするためのスクリプトです。
 

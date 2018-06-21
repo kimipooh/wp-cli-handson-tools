@@ -1,3 +1,0 @@
-export php_path="`ls -d /Applications/MAMP/bin/php/php* | tail -1`"
-export PATH_2="$PATH"
-export PATH="${php_path}/bin:$PATH"
