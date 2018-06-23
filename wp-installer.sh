@@ -15,6 +15,11 @@ export admin_password="admin"
 export admin_email="admin@example.com"
 export wp_install_dir="/Applications/MAMP/htdocs/"
 
+export php_path="`ls -d /Applications/MAMP/bin/php/php* | tail -1`"
+export PATH_2="$PATH"
+export PATH="${php_path}/bin:/Applications/MAMP/Library/bin:$PATH"
+
+
 # WordPress インストール先フォルダが存在したら、処理を停止する（上書き怖い！）
 if [ -d "${wp_install_dir}/${sitename}" ]; then
   echo "Folder exists. Stopped WordPress Installer on WP-CLI."
